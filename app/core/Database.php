@@ -50,7 +50,7 @@ class Database
         return self::$connection = $mysqli;
     }
 
-    /** Load DB settings, preferring a gitignored local override so secrets stay out of git. */
+    /** Load DB settings from config/database.php (gitignored so secrets stay out of git). */
     private static function config(): array
     {
         $path = BASE_PATH . '/config/database.php';
